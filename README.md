@@ -34,8 +34,8 @@ Use the Http::vegvesen() macro to make requests to the Vegvesen API:
 ```php
 use Illuminate\Support\Facades\Http;
 
-$response = Http::vegvesen()->get('kjennemerke={registreringsnummer}');
-$response = Http::vegvesen()->get('understellsnummer={vin nummer}');
+$response = Http::vegvesen()->get('kjoretoydata?kjennemerke={registreringsnummer}');
+$response = Http::vegvesen()->get('kjoretoydata?understellsnummer={vin nummer}');
 ```
 
 Replace `{registreringsnummer}` or `{vin nummer}` with the appropriate vehicle registration number or VIN number. Adjust the endpoint and request parameters according to your API needs. Refer to the [Vegvesen API Documentation](https://autosys-kjoretoy-api.atlas.vegvesen.no/api-ui/index-enkeltoppslag.html) for detailed information on available endpoints and request formats.
